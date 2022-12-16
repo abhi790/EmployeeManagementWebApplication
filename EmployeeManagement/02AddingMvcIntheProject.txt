@@ -1,0 +1,9 @@
+	1. Adding CONTROLLER
+
+Step 1 : Create a folder called Controller in the root directory of the project 
+Step 2 : Create a class <ControllerName>Controller.cs inside the Controller directory
+Step 3 : Add the MVC services to the Dependency Injection Container
+	-- add services.AddMvc() in ConfigureServices()
+Step 4 : Add MVC middleware to the Request Pipeline
+	-- add app.UseMvcWithDefaultRoute() in Configure()
+ 
