@@ -15,21 +15,38 @@ namespace EmployeeManagement.Controllers
         {
             _employeeRepository = employeeRepository;
         }
-        public string Index()
+        public ViewResult Index()
         {
-            return _employeeRepository.GetEmployee(1).Name;
+            IEnumerable<Employee> list = _employeeRepository.GetAllEmployee();
+            return View(list);
         }
 
-        public ViewResult Details()
+        public ViewResult Details(int? id)
         {
             HomeDetailsViewModel homeDetailsViewModel = new HomeDetailsViewModel();
-            homeDetailsViewModel.Employee = _employeeRepository.GetEmployee(1);
+            homeDetailsViewModel.Employee = _employeeRepository.GetEmployee(id??1);
             homeDetailsViewModel.PageTitle = "Employee Details";
             
             return View(homeDetailsViewModel);
         }
+        [HttpGet]
+        public ViewResult Create()
+        {
+            return View();
+        }
+        [HttpPost]
+        public IActionResult Create(Employee employee)
+        {
+            if (ModelState.IsValid)
+            {
+                Employee newEmployee =  _employeeRepository.Add(employee);
+                return RedirectToAction("details","home",newEmployee);
 
-        
+            }
+            return View();
+        }
+
+
     }
 
 }

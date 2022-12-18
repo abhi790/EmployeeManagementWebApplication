@@ -12,7 +12,6 @@ C:\DotnetLearningByVenkat\DotNetCoreWebApplication\EmployeeManagement\EmployeeMa
 C:\DotnetLearningByVenkat\DotNetCoreWebApplication\EmployeeManagement\EmployeeManagement\obj\Debug\netcoreapp2.1\EmployeeManagement.dll
 C:\DotnetLearningByVenkat\DotNetCoreWebApplication\EmployeeManagement\EmployeeManagement\obj\Debug\netcoreapp2.1\EmployeeManagement.pdb
 C:\DotnetLearningByVenkat\DotNetCoreWebApplication\EmployeeManagement\EmployeeManagement\obj\Debug\netcoreapp2.1\EmployeeManagement.csprojAssemblyReference.cache
-C:\GitVersioning\GitHub\DotnetWebApplicationVenkat\01Project\EmployeeManagementWebApplication\EmployeeManagement\obj\Debug\netcoreapp2.1\EmployeeManagement.csprojAssemblyReference.cache
 C:\GitVersioning\GitHub\DotnetWebApplicationVenkat\01Project\EmployeeManagementWebApplication\EmployeeManagement\obj\Debug\netcoreapp2.1\EmployeeManagement.csproj.CoreCompileInputs.cache
 C:\GitVersioning\GitHub\DotnetWebApplicationVenkat\01Project\EmployeeManagementWebApplication\EmployeeManagement\obj\Debug\netcoreapp2.1\EmployeeManagement.RazorAssemblyInfo.cache
 C:\GitVersioning\GitHub\DotnetWebApplicationVenkat\01Project\EmployeeManagementWebApplication\EmployeeManagement\obj\Debug\netcoreapp2.1\EmployeeManagement.RazorAssemblyInfo.cs
@@ -35,4 +34,9 @@ C:\GitVersioning\GitHub\DotnetWebApplicationVenkat\01Project\EmployeeManagementW
 C:\GitVersioning\GitHub\DotnetWebApplicationVenkat\01Project\EmployeeManagementWebApplication\EmployeeManagement\obj\Debug\netcoreapp2.1\EmployeeManagement.RazorTargetAssemblyInfo.cs
 C:\GitVersioning\GitHub\DotnetWebApplicationVenkat\01Project\EmployeeManagementWebApplication\EmployeeManagement\obj\Debug\netcoreapp2.1\EmployeeManagement.Views.pdb
 C:\GitVersioning\GitHub\DotnetWebApplicationVenkat\01Project\EmployeeManagementWebApplication\EmployeeManagement\obj\Debug\netcoreapp2.1\EmployeeManagement.csproj.CopyComplete
-C:\GitVersioning\GitHub\DotnetWebApplicationVenkat\01Project\EmployeeManagementWebApplication\EmployeeManagement\obj\Debug\netcoreapp2.1\Razor\Views\Home\Test.g.cshtml.cs
+C:\GitVersioning\GitHub\DotnetWebApplicationVenkat\01Project\EmployeeManagementWebApplication\EmployeeManagement\obj\Debug\netcoreapp2.1\Razor\Views\Home\Index.g.cshtml.cs
+C:\GitVersioning\GitHub\DotnetWebApplicationVenkat\01Project\EmployeeManagementWebApplication\EmployeeManagement\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_Layout.g.cshtml.cs
+C:\GitVersioning\GitHub\DotnetWebApplicationVenkat\01Project\EmployeeManagementWebApplication\EmployeeManagement\obj\Debug\netcoreapp2.1\Razor\Views\_ViewStart.g.cshtml.cs
+C:\GitVersioning\GitHub\DotnetWebApplicationVenkat\01Project\EmployeeManagementWebApplication\EmployeeManagement\obj\Debug\netcoreapp2.1\Razor\Views\_ViewImports.g.cshtml.cs
+C:\GitVersioning\GitHub\DotnetWebApplicationVenkat\01Project\EmployeeManagementWebApplication\EmployeeManagement\obj\Debug\netcoreapp2.1\EmployeeManagement.csprojAssemblyReference.cache
+C:\GitVersioning\GitHub\DotnetWebApplicationVenkat\01Project\EmployeeManagementWebApplication\EmployeeManagement\obj\Debug\netcoreapp2.1\Razor\Views\Home\Create.g.cshtml.cs

@@ -1,0 +1,11 @@
+Step 1 : include below dependency in _ViewImport.cshtml file
+	@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers;
+	
+Step 2 : 
+	@Html.ActionLink("NewView","details","home",new {id=employee.Id })
+        <a href="@Url.Action("details","home", new { id = employee.Id})" class="btn btn-primary">View</a>
+        <a href="/home/details/@employee.Id" >View</a>
+
+	Above all three are working
+
+	Not working in my code  -- <a asp-controller="" asp-action="" asp-route-id="">

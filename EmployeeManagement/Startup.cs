@@ -8,6 +8,8 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using EmployeeManagement.Models;
+using Microsoft.EntityFrameworkCore;
+
 namespace EmployeeManagement
 {
     public class Startup
@@ -22,8 +24,12 @@ namespace EmployeeManagement
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDbContextPool<AppDbContext>(options =>
+                    options.UseSqlServer(_config.GetConnectionString("EmployeeDBConnection")));
+
             services.AddMvc();
-            services.AddSingleton<IEmployeeRepository, MockEmployeeRepository>();
+            //services.AddSingleton<IEmployeeRepository, MockEmployeeRepository>();
+            services.AddScoped<IEmployeeRepository, SQLEmployeeRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -38,7 +44,11 @@ namespace EmployeeManagement
             //Serve the static files first
             app.UseStaticFiles();
             //then process mvc if any
-            app.UseMvcWithDefaultRoute();
+            //app.UseMvcWithDefaultRoute();
+            app.UseMvc(route =>
+            {
+                route.MapRoute("default", "{controller=Home}/{action=Index}/{id?}");
+            });
             
             app.Run(async (context) =>
             {
