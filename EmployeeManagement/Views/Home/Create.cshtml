@@ -1,14 +1,14 @@
-﻿@model Employee
+﻿@model EmployeeCreateViewModel
 
 @{ 
     ViewBag.Title = "Create Employee";
 }
 
-<form asp-controller="Home" asp-action="Create" method="post" class="mt-3">
+<form enctype="multipart/form-data" asp-controller="Home" asp-action="Create" method="post" class="mt-3">
     <div class="row mb-3">
         <label asp-for="Name" class="col-sm-2 col-form-label form-label"></label>
-        <div class="col-sm-10" >
-            <input asp-for="Name" class="form-control" placeholder="Name"/>
+        <div class="col-sm-10">
+            <input asp-for="Name" class="form-control" placeholder="Name" />
             <span asp-validation-for="Name" class="text-danger"></span>
         </div>
     </div>
@@ -26,15 +26,30 @@
                     class="form-select">
                 <option value="">Please Select</option>
             </select>
-            
+
             <span asp-validation-for="Department" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label asp-for="Photo" class="col-sm-2 col-form-label form-label"></label>
+        <div class="col-sm-10">
+            <div class="custom-file">
+                <input asp-for="Photo" class="form-control custom-file-input" />
+                @*<label class="custom-file-label">Choose File..</label>*@
+            </div>
         </div>
     </div>
     <div asp-validation-summary="All" class="text-danger"></div>
     <div class="mb-3 row">
         <div class="col-sm-10">
             <button type="submit" class="btn btn-primary">Create</button>
+
         </div>
     </div>
 
+    <div>
+        @section Scripts{ 
+            
+        }
+    </div>
 </form>

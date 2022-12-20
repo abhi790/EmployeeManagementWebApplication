@@ -40,3 +40,5 @@ C:\GitVersioning\GitHub\DotnetWebApplicationVenkat\01Project\EmployeeManagementW
 C:\GitVersioning\GitHub\DotnetWebApplicationVenkat\01Project\EmployeeManagementWebApplication\EmployeeManagement\obj\Debug\netcoreapp2.1\Razor\Views\_ViewImports.g.cshtml.cs
 C:\GitVersioning\GitHub\DotnetWebApplicationVenkat\01Project\EmployeeManagementWebApplication\EmployeeManagement\obj\Debug\netcoreapp2.1\EmployeeManagement.csprojAssemblyReference.cache
 C:\GitVersioning\GitHub\DotnetWebApplicationVenkat\01Project\EmployeeManagementWebApplication\EmployeeManagement\obj\Debug\netcoreapp2.1\Razor\Views\Home\Create.g.cshtml.cs
+C:\GitVersioning\GitHub\DotnetWebApplicationVenkat\01Project\EmployeeManagementWebApplication\EmployeeManagement\obj\Debug\netcoreapp2.1\Razor\Views\Home\Delete.g.cshtml.cs
+C:\GitVersioning\GitHub\DotnetWebApplicationVenkat\01Project\EmployeeManagementWebApplication\EmployeeManagement\obj\Debug\netcoreapp2.1\Razor\Views\Home\Edit.g.cshtml.cs

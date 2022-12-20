@@ -1,7 +1,15 @@
 ﻿body {
 }
 
-.btn{
-   width : 75px;
+.imageThumbnail {
+    height:200px;
+    width:auto;
 }
+/*.btn { 
+   width : 75px;
+}*/
 
+.brand-image{
+    height:30px;
+    width:30px;
+}

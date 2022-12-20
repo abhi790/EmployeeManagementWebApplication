@@ -24,7 +24,7 @@
     <div class="container">
         <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
             <a class="navbar-brand" asp-controller="home" asp-action="index" >
-                <img src="~/images/employees.png" height="30" width="30"/>
+                <img class="brand-image" src="~/images/employees.png" height="30" width="30"/>
             </a>
             <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#collapsibleNavbar">
                 <span class="navbar-toggler-icon"></span>
@@ -48,7 +48,7 @@
         </div>
         @if (IsSectionDefined("Scripts"))
         {
-            RenderSection("Scripts", required: true);
+            @RenderSection("Scripts", required: true);
         }
     </div>
     <script src="~/js/Scripts.js"></script>
