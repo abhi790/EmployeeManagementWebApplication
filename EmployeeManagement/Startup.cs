@@ -40,6 +40,11 @@ namespace EmployeeManagement
             {
                 app.UseDeveloperExceptionPage();
             }
+            else
+            {
+                app.UseExceptionHandler("/Error");
+                app.UseStatusCodePagesWithReExecute("/Error/{0}");
+            }
 
             //Serve the static files first
             app.UseStaticFiles();
@@ -50,10 +55,11 @@ namespace EmployeeManagement
                 route.MapRoute("default", "{controller=Home}/{action=Index}/{id?}");
             });
             
-            app.Run(async (context) =>
-            {
-                await context.Response.WriteAsync("Hello World");
-            });
+            //terminal phase of pipeline
+            //app.Run(async (context) =>
+            //{
+            //    await context.Response.WriteAsync("Hello World");
+            //});
             
 
 
