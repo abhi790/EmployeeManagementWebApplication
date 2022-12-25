@@ -8,6 +8,7 @@ using EmployeeManagement.ViewModels;
 using Microsoft.AspNetCore.Hosting;
 using System.IO;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Authorization;
 
 namespace EmployeeManagement.Controllers
 {
@@ -21,13 +22,13 @@ namespace EmployeeManagement.Controllers
             _employeeRepository = employeeRepository;
             this.hostingEnvironment = hostingEnvironment;
         }
-
+        [AllowAnonymous]
         public ViewResult Index()
         {
             IEnumerable<Employee> list = _employeeRepository.GetAllEmployee();
             return View(list);
         }
-
+        [AllowAnonymous]
         public ViewResult Details(int? id)
         {
             Employee employee = _employeeRepository.GetEmployee(id.Value);
@@ -46,7 +47,7 @@ namespace EmployeeManagement.Controllers
             
             return View(homeDetailsViewModel);
         }
-
+        [Authorize]
         public IActionResult Delete(int id)
         {
             
@@ -54,13 +55,9 @@ namespace EmployeeManagement.Controllers
             return RedirectToAction("Index", "Home");
         }
 
+        
         [HttpGet]
-        public ViewResult Create()
-        {
-            
-            return View();
-        }
-        [HttpGet]
+        [Authorize]
         public IActionResult Edit(int id)
         {
             Employee emp = _employeeRepository.GetEmployee(id);
@@ -76,6 +73,7 @@ namespace EmployeeManagement.Controllers
             return View(editViewModel);
         }
         [HttpPost]
+        [Authorize]
         public IActionResult Edit(EmployeeEditViewModel model)
         {
             Employee employee = _employeeRepository.GetEmployee(model.Id);
@@ -120,7 +118,16 @@ namespace EmployeeManagement.Controllers
             return uniqueFileName;
         }
 
+        [HttpGet]
+        [Authorize]
+        public ViewResult Create()
+        {
+
+            return View();
+        }
+
         [HttpPost]
+        [Authorize]
         public IActionResult Create(EmployeeCreateViewModel model)
         {
             if (ModelState.IsValid)

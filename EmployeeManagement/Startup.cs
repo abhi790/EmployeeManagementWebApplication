@@ -9,6 +9,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using EmployeeManagement.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity;
 
 namespace EmployeeManagement
 {
@@ -24,6 +25,13 @@ namespace EmployeeManagement
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddIdentity<IdentityUser, IdentityRole>(options => {
+                options.Password.RequiredLength = 10;
+                options.Password.RequiredUniqueChars = 3;
+
+            })
+                .AddEntityFrameworkStores<AppDbContext>();
+
             services.AddDbContextPool<AppDbContext>(options =>
                     options.UseSqlServer(_config.GetConnectionString("EmployeeDBConnection")));
 
@@ -48,6 +56,7 @@ namespace EmployeeManagement
 
             //Serve the static files first
             app.UseStaticFiles();
+            app.UseAuthentication();
             //then process mvc if any
             //app.UseMvcWithDefaultRoute();
             app.UseMvc(route =>
